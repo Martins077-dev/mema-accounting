@@ -1,0 +1,23 @@
+/* @media screen and (max-width: 375px) {
+   .cardSection {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1.6fr;
+   }
+
+   .cardSection > div:first-child > ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      g
+   }
+
+   .cardSection > div:first-child > h2 {
+      font-size: 6rem;
+      padding: 1.5rem 0;
+   }
+
+   .cardSection > div:first-child > ul > li > a {
+      font-size: 2.4rem;
+      background-color: red;
+   }
+} */

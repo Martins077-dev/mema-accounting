@@ -1,0 +1,772 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Nunito', Arial, Helvetica, sans-serif;
+}
+
+:root {
+   --1stBlue: #072b4e;
+   --2ndBlue: #2d5c88;
+   --3rdBlue: #a0bad5;
+   --4thBlue: #dfebf9;
+   --5thBlue: #046ef5;
+   --1stGray: #302926;
+   --2ndGray: #403c39;
+   --3rdGray: #615d5c;
+   --1stRed: #ef4237;
+}
+
+html {
+   scroll-padding-top: 65px;
+   scroll-behavior: smooth;
+}
+
+body {width: 100%;}
+
+
+/* ===========  H E A D E R  =========== */
+header {
+   background-color: var(--1stBlue);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1.5rem;
+   padding: 1rem 0;
+}
+
+header img {
+   display: flex;
+   width: 10.3rem;
+   padding: 0.2rem 0.4rem;
+   border-radius: 0.8rem;
+   background-color: white;
+}
+
+header a {
+   display: flex;
+   text-decoration: none;
+   color: white;
+}
+
+header h1 {
+   font-size: 2.9rem;
+   font-weight: 900;
+   letter-spacing: 0.1rem;
+   /* font-family: 'Cantarell', Arial, Helvetica, sans-serif; */
+} 
+/*====== E N D   O F   H E A D E R ======*/
+
+
+
+/*====== N A V I G A T I O N   B A R ======*/
+nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1.3rem 5%;
+   border-bottom: 0.2rem solid var(--1stBlue);
+   background-color: var(--4thBlue);
+   position: sticky;
+   top: 0;
+   z-index: 3;
+}
+
+nav > ul {
+   display: flex;
+   align-items: center;
+   list-style-type: none;
+   gap: 2.8rem;
+}
+
+nav > ul > li > a {
+   display: flex;
+   text-decoration: none;
+   letter-spacing: 0.1rem;
+   color: var(--1stBlue);
+   font-weight: 900;
+   font-size: 1.5rem;
+   position: relative;
+   transition: all 0.5s;
+}
+
+/* nav > div:nth-child(2) > ul > li > a:hover {
+   color: var(--5thBlue);
+} */
+
+nav > ul > li > a::before {
+   content: '';
+   position: absolute;
+   border-radius: 0.3rem;
+   background-color: var(--1stBlue);
+   inset: 0;
+   top: 100%;
+   right: 100%;
+   bottom: -0.4rem;
+   transition: all 0.5s;
+}
+
+nav > ul > li > a:hover::before {
+   right: 0;
+   /* background-color: var(--5thBlue); */
+}
+
+nav > div {
+   display: flex;
+   align-items: center;
+   gap: 1.3rem;
+}
+
+nav > div > a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   line-height: 0;
+   /* background-color: red; */
+   aspect-ratio: 1 / 1;
+   width: 3.4rem;
+   border-radius: 50%;
+   color: var(--1stBlue);
+   font-size: 2rem;
+   transition: all 0.4s;
+}
+
+nav > div > a:hover {
+   color: var(--4thBlue);
+   background-color: var(--1stBlue);
+}
+/* ===========  E N D   O F   N A V I G A T I O N   B A R  =========== */
+
+
+/* ======  M A R Q U E E   S E C T I O N */
+.marqueeSection {
+   margin-top: 3rem;
+   overflow: hidden;
+   user-select: none;
+}
+
+.marqueeSection > div {
+   width: fit-content;
+}
+
+.marqueeDiv {
+   display: flex;
+   align-items: center;
+   /* justify-content: center; */
+   gap: 5rem;
+   padding: 0 2.5rem;
+   animation: marqueeAnime 15s linear infinite;
+   white-space: nowrap;
+}
+@keyframes marqueeAnime {
+   0% {translate: 0;}
+   100% {translate: -50%;}
+}
+
+.marqueeDiv > span {
+   flex-shrink: 0;
+   color: var(--2ndBlue);
+   font-weight: 900;
+   font-size: 1.8rem;
+   letter-spacing: 0.05rem;
+}
+/* ======   E N D   O F  M A R Q U E E   S E C T I O N */
+
+
+/* ====== C A R D   S E C T I O N  ====== */
+.cardSection {
+   box-shadow: 0 0 1.5rem rgba(165,165,165,0.6), 0 0 4rem var(--4thBlue);
+   margin: 4rem auto 0;
+   width: 94%;
+   padding: 4.5rem 5% 4rem;
+   display: grid;
+   grid-template-columns: 3.9fr 6.1fr;
+   grid-template-rows: 1fr;
+   /* font-size: 20px; */
+   gap: 3.5rem;
+   border-radius: 1.5rem;
+   background-image: linear-gradient(white, rgba(255,255,255, 0.85)), url('Images/bookImg.png');
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   background-position: 0% 100%;
+}
+
+.cardSection > div:first-child {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 2.5rem;
+   padding: 1.5rem 0;
+   border-radius: 1.5rem;
+   /* background-color: var(--3rdBlue); */
+}
+
+.cardSection > div:first-child > h2 {
+   font-size: 3.5rem;
+   /* line-height: 3.5rem; */
+   font-weight: 900;
+   letter-spacing: 0.1rem;
+   color: var(--1stBlue);
+}
+
+.cardSection > div:first-child > ul {
+   list-style-type: none;
+   /* background-color: var(--3rdBlue); */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   /* padding: 20px; */
+   border-radius: 2rem;
+   gap: 0.7rem;
+}
+
+.cardSection > div:first-child > ul > li > a {
+   text-decoration: none;
+   font-weight: 900;
+   font-size: 1.7rem;
+   /* line-height: 1.6rem; */
+   display: flex;
+   align-items: center;
+   gap: 0.8rem;
+   color: var(--2ndBlue);
+   /* background-color: var(--4thBlue); */
+   letter-spacing: 0.05rem;
+   width: 100%;
+   padding: 0.45rem 1.3rem;
+   transition: all 0.25s;
+}
+
+.cardSection > div:first-child > ul > li > a:hover {
+   background-color: var(--1stBlue);
+   color: var(--4thBlue);
+}
+
+.cardSection > div:first-child > ul > li {
+   /* padding: 0px 13px; */
+   overflow: hidden;
+   border-radius: 1.8rem;
+   transform: translateX(0);
+   /* border: 1.5px solid var(--1stBlue); */
+   transition: all 0.5s;
+}
+
+.cardSection > div:first-child > ul > li:hover {
+   transform: translateX(0.8rem);
+}
+
+.cardSection > div:first-child > ul a::before {
+   content: '⮞';
+   /* padding: 5px; */
+   border-radius: 50%;
+   aspect-ratio: 1 / 1;
+   font-family: 'Nunito';
+   font-weight: 1000;
+   font-size: 1.5rem;
+   /* line-height: 1.5rem; */
+   color: var(--1stBlue);
+   line-height: 0;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.25s;
+}
+
+.cardSection > div:first-child > ul > li> a:hover::before {
+   color: var(--4thBlue);
+}
+
+.cardSection > div:nth-child(2) {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   gap: 2rem;
+   border-radius: 1rem;
+   padding: 1.2rem 0;
+   /* background-color: antiquewhite; */
+}
+
+.cardSection > div:nth-child(2) > div {
+   display: flex;
+   border-radius: 1.2rem;
+   position: relative;
+   overflow: hidden;
+   box-shadow: 0 0 1.8rem rgb(124,124,124);
+}
+
+.cardSection > div:nth-child(2) > div > img {
+   display: flex;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   transform: scale(1);
+   transition: all 0.5s;
+}
+
+.cardSection > div:nth-child(2) > div:hover > img {
+   transform: scale(1.1);
+}
+
+.cardSection > div:nth-child(2) > div > img:first-child {
+   animation: cardImg1 7s linear infinite;
+}
+@keyframes cardImg1 {
+   0%, 32% {opacity: 1;}
+   33%, 96% {opacity: 0;}
+   97%, 100% {opacity: 1;}
+}
+
+.cardSection > div:nth-child(2) > div > img:nth-child(2) {
+   animation: cardImg2 7s linear infinite;
+}
+@keyframes cardImg2 {
+   0%, 32%, 65%, 100% {opacity: 0;}
+   33%, 64% {opacity: 1;}
+}
+
+.cardSection > div:nth-child(2) > div > img:nth-child(3) {
+   animation: cardImg3 7s linear infinite;
+}
+@keyframes cardImg3 {
+   0%, 64%, 97%, 100% {opacity: 0;}
+   65%, 96% {opacity: 1;}
+}
+
+.cardSection > div:nth-child(2) > div > div {
+   position: absolute;
+   z-index: 1;
+   width: 100%;
+   height: 100%;
+   background-image: linear-gradient(transparent, transparent, black);
+}
+
+.cardSection > div:nth-child(2) > div > div > span {
+   position: absolute;
+   color: var(--4thBlue);
+   background-color: var(--2ndBlue);
+   font-size: 1.4rem;
+   /* line-height: 1.4rem; */
+   font-weight: 900;
+   letter-spacing: 0.1rem;
+   border-radius: 0.5rem;
+   padding: 0.2rem 0.6rem;
+   bottom: 6%;
+   left: 5%;
+   transition: all 0.5s;
+}
+
+.cardSection > div:nth-child(2) > div:hover > div > span {
+   color: white;
+   background-color: rgb(218, 59, 59);
+}
+/* ====== E N D   O F   C A R D   S E C T I O N  ====== */
+
+
+
+/* ====== A B O U T   S E C T I O N  ====== */
+.aboutUsSection {
+   border-radius: 1.5rem;
+   margin: 6rem auto 0;
+   width: 94%;
+   padding: 3.5rem 10% 4.5rem;
+   background-image: linear-gradient(white, 75%, rgba(0,0,0,0.5)), url('Images/bookImg4.png');
+   box-shadow: 0 0 1.5rem rgba(165,165,165,0.6), 0 0 4rem var(--4thBlue);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.aboutUsSection > div > h2 {
+   margin: 0 auto 1.5rem;
+   width: fit-content;
+   color: var(--1stBlue);
+   font-weight: 900;
+   font-size: 3.5rem;
+   letter-spacing: 0.1rem;
+   line-height: 4rem;
+}
+
+.aboutUsSection > div > div {
+   background-color: rgba(255,255,255,0.8);
+   border-radius: 1.5rem;
+   padding: 3rem 3.5rem;
+   display: flex;
+   gap: 2rem;
+   flex-direction: column;
+}
+
+.aboutUsSection > div > div > p {
+   font-size: 1.7rem;
+   font-weight: 700;
+   letter-spacing: 0.05rem;
+   color: var(--2ndGray);
+}
+
+.aboutUsSection > div > div > img {
+   width: 12rem;
+   align-self: flex-end;
+   scale: 1;
+   transition: all 0.5s;
+}
+
+.aboutUsSection > div > div > img:hover {
+   scale: 1.1;
+}
+/* ====== E N D  O F   A B O U T   S E C T I O N  ====== */
+
+
+
+/* ====== P R E S I D E N T   S E C T I O N  ====== */
+.presidentSection {
+   width: 94%;
+   padding: 0px 0%;
+   margin: 5rem auto 0;
+   border-radius: 1.5rem;
+   /* box-shadow: 0 0 15px rgba(165,165,165,0.6), 0 0 40px var(--4thBlue); */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.presidentSection > h2 {
+   color: var(--1stBlue);
+   font-size: 3.5rem;
+   font-weight: 900;
+   margin-bottom: 3rem;
+   letter-spacing: 0.1rem;
+}
+
+.presidentGrid {
+   /* display: grid;
+   grid-template-columns: 6.5fr 3.5fr;
+   grid-template-rows: auto;
+   gap: 55px;
+   align-items: center;
+   justify-items: center; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 5rem;
+   width: 75%;
+}
+
+.presidentGrid > div:nth-child(2) > img {
+   width: 100%;
+   height: 100%;
+   object-position: center;
+   object-fit: cover;
+   scale: 1;
+   transition: all 0.5s;
+}
+
+.presidentGrid > div:hover > img {
+   scale: 1.1;
+}
+
+.presidentGrid > div:nth-child(1) {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.presidentGrid > div:nth-child(1) > h3 {
+   font-size: 2.1rem;
+   font-weight: 800;
+   color: var(--1stGray);
+}
+
+.presidentGrid > div:nth-child(1) > p {
+   color: var(--3rdGray);
+   font-weight: 600;
+   font-size: 1.7rem;
+   letter-spacing: 0.05rem;
+}
+
+.presidentGrid > div:nth-child(2) {
+   display: flex;
+   overflow: hidden;
+   border-radius: 2rem;
+   width: 225rem;
+   aspect-ratio: 3.7 / 5;
+   box-shadow: 0.4rem -0.4rem var(--3rdBlue);
+}
+/* ====== E N D   O F   P R E S I D E N T   S E C T I O N  ====== */
+
+
+
+/* ====== C O N T A C T   U S   S E C T I O N  ====== */
+.contactUsSection {
+   background-image: linear-gradient(white, rgba(255,255,255,0.8)), url('Images/bookImg3.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   /* border: 2px solid red; */
+   border-radius: 1.5rem;
+   box-shadow: 0 0 1.5rem rgba(165,165,165,0.8), 0 0 4rem var(--4thBlue);
+   width: 94%;
+   margin: 6rem auto 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2.5rem;
+   padding: 3rem 2rem 4rem;
+}
+
+.contactUsSection > h2 {
+   color: var(--1stBlue);
+   font-size: 3.5rem;
+   font-weight: 900;
+   letter-spacing: 0.1rem;
+}
+
+.contactGrid {
+   /* display: flex;
+   align-items: center;
+   justify-content: center; */
+   display: grid;
+   grid-template-columns: 4.5fr 5.5fr;
+   grid-template-rows: 1fr;
+   gap: 2rem;
+   width: 80%;
+   border-radius: 1.5rem;
+   overflow: hidden;
+   /* align-items: center; */
+   background: white;
+}
+
+.contactGrid > div:first-child {
+   padding: 3.5rem 2.5rem;
+   display: flex;
+   flex-direction: column;
+   /* border-radius: 15px; */
+   align-items: center;
+   justify-content: center;
+   gap: 3rem;
+}
+
+.contactGrid > div:first-child > span {
+   color: var(--2ndBlue);
+   font-size: 1.8rem;
+   font-weight: 700;
+   letter-spacing: 0.1rem;
+}
+
+.contactGrid > div:first-child > img {
+   width: 22rem;
+}
+
+.contactD {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   font-size: 1.5rem;
+   font-weight: 800;
+   letter-spacing: 0.05rem;
+   color: var(--1stBlue);
+}
+
+.contactGrid > div:nth-child(2) {
+   /* background: greenyellow; */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /* border-radius: 15px; */
+   /* padding: 10px 0; */
+}
+
+form {
+   /* background-color: white; */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1.5rem;
+   width: 80%;
+   padding: 2.5rem 4rem 2rem;
+   border-radius: 1rem;
+}
+
+form > h2 {
+   color: var(--2ndBlue);
+   font-size: 2.6rem;
+   line-height: 3rem;
+   font-weight: 800;
+   letter-spacing: 0.1rem;
+}
+
+form > section {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 1.2rem;
+}
+
+form > section > div {
+   display: flex;
+   flex-direction: column;
+   /* align-items: center; */
+}
+
+/* .col-a {
+   width: 35%;
+}
+
+.col-b {
+   width: 65%;
+} */
+
+label {
+   color: var(--3rdGray);
+   font-size: 1.8rem;
+   font-weight: 800;
+   letter-spacing: 0.05rem;
+}
+
+input, textarea {
+   width: 100%;
+   border-radius: 1rem;
+   font-size: 1.5rem;
+   font-weight: 600;
+   padding: 0.3rem 1rem;
+   letter-spacing: 0.1rem;
+   outline: none;
+   border: 0.15rem solid var(--2ndBlue);
+}
+
+input:focus, textarea:focus {
+   border: 0.15rem solid var(--1stRed);
+   background-color: beige;
+}
+
+textarea {
+   font-size: 1.5rem;
+   width: 100%;
+   height: 15rem;
+}
+
+button {
+   border: none;
+   border-radius: 1rem;
+   color: white;
+   background-color: var(--1stRed);
+   font-size: 1.8rem;
+   font-weight: 800;
+   letter-spacing: 0.5rem;
+   padding: 0.4rem 2.5rem;
+   cursor: pointer;
+   transition: all 0.5s;
+}
+
+button:hover {
+   background-color: brown;
+}
+
+.hoursAvailable {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+
+.hoursAvailable > h3 {
+   color: var(--2ndBlue);
+   font-size: 2rem;
+   font-weight: 800;
+   letter-spacing: 0.1rem; 
+}
+
+.hoursAvailable > ul {
+   display: flex;
+   flex-direction: column;
+   gap: 0.3rem;
+}
+
+.hoursAvailable > ul > li {
+   color: var(--2ndBlue);
+   font-weight: 700; 
+   letter-spacing: 0.05rem; 
+}
+/* ====== E N D  O F   C O N T A C T   U S   S E C T I O N  ====== */
+
+
+
+/* ======   F O O T E R   S E C T I O N   ====== */
+footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   background-color: var(--1stBlue);
+   color: var(--4thBlue);
+   font-size: 2rem;
+   padding: 3.5rem 0;
+   margin-top: 7.5rem;
+}
+
+footer > span {
+   font-size: 1.6rem;
+}
+
+footer > a {
+   text-decoration: none;
+   font-size: 1.7rem;
+   color: var(--4thBlue);
+   font-weight: 800;
+}
+
+footer > div:last-child {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+}
+
+footer > div:last-child span {
+   font-size: 1.5rem;
+   letter-spacing: 0.1rem;
+   font-weight: 700;
+}
+
+footer hr {
+   width: 50%;
+   background: black;
+}
+
+.hrdiv {
+   height: 0.2rem;
+   background-color: var(--4thBlue);
+   width: 20%;
+   margin: 2rem 0 1.5rem;
+}
+
+footer > div:last-child img {
+   width: 7rem;
+}
+/* ====== E N D   O F   F O O T E R   S E C T I O N   ====== */
+
+
+section {
+   position: relative;
+}
+
+.backToTop {
+   position: absolute;
+   text-decoration: none;
+   border-radius: 0.9rem;
+   font-weight: 900;
+   letter-spacing: 0.05rem;
+   font-size: 1.3rem;
+   color: var(--4thBlue);
+   background-color: var(--1stBlue);
+   padding: 0.4rem 0.8rem;
+   bottom: 0.2rem;
+   right: 5%;
+   margin-bottom: 0.5rem;
+   transition: all 0.5s;
+}
+
+.backToTop:hover {
+   background-color: var(--2ndBlue);
+}
