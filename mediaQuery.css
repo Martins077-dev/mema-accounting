@@ -1,23 +1,265 @@
-/* @media screen and (max-width: 375px) {
+@media screen and (max-width: 375px) {
+   /* === CARD SECTION === */
    .cardSection {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1.6fr;
+      grid-template-rows: 1fr 1.55fr;
+      width: 95%;
+      padding: 2rem 4% 6rem;
    }
 
    .cardSection > div:first-child > ul {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(4, 1fr);
-      g
+      gap: 1rem 0;
    }
 
    .cardSection > div:first-child > h2 {
-      font-size: 6rem;
+      font-size: 7rem;
       padding: 1.5rem 0;
    }
 
    .cardSection > div:first-child > ul > li > a {
-      font-size: 2.4rem;
-      background-color: red;
+      font-size: 2.65rem;
+      /* background-color: red; */
+      padding: 0.7rem 2rem;
    }
-} */
+
+   .cardSection > div:first-child > ul a::before {
+      font-size: 3rem;
+   }
+
+   .cardSection > div:first-child > ul > li {
+      border-radius: 2.5rem;
+   }
+
+   .cardSection > div:nth-child(2) > div > div > span {
+      font-size: 2.5rem;
+      padding: 0.7rem 1.5rem;
+      letter-spacing: 0.2rem;
+      border-radius: 1rem;
+   }
+
+   .cardSection > div:nth-child(2) {
+      gap: 2.6rem;
+   }
+   /* === END OF CARD SECTION === */
+
+
+   /* === ABOUT US SECTION === */
+   .aboutUsSection {
+      width: 95%;
+      padding: 8rem 3% 9rem;
+   }
+
+   .aboutUsSection > div > h2 {
+      font-size: 7rem;
+      margin: 0 auto 3.5rem;
+   }
+
+   .aboutUsSection > div > div {
+      padding: 4rem 4rem 4.5rem;
+      gap: 5rem;
+   }
+
+   .aboutUsSection > div > div > p {
+      font-size: 3.5rem;
+      letter-spacing: 0.15rem;
+      text-align: justify;
+      gap: 5rem;
+   }
+
+   .aboutUsSection > div > div > img {
+      width: 23rem;
+   }
+   /* === END OF ABOUT US SECTION === */
+
+
+
+   /* ====== PRESIDENT SECTION ====== */
+   .presidentSection {
+      width: 95%;
+      margin: 10rem auto 0;
+      /* background-color: red; */
+   }
+
+   .presidentSection > h2 {
+      font-size: 6.5rem;
+      letter-spacing: 0.2rem;
+      margin-bottom: 5.5rem;
+   }
+
+   .presidentGrid {
+      width: 85%;
+      flex-direction: column-reverse;
+      gap: 1.5rem;
+   }
+
+   .presidentGrid > div:nth-child(1) {
+      align-items: center;
+      gap: 3rem;
+   }
+
+   .presidentGrid > div:nth-child(1) > h3 {
+      font-size: 5.5rem;
+      letter-spacing: 0.2rem;
+   }
+
+   .presidentGrid > div:nth-child(1) > p {
+      font-size: 3.6rem;
+      letter-spacing: 0.2rem;
+      font-weight: 700;
+      text-align: justify;
+   }
+
+   .presidentGrid > div:nth-child(2) {
+      width: 50rem;
+      aspect-ratio: 3 / 3;
+      border-radius: 6rem;
+   }
+
+   .presidentGrid > div:nth-child(2) > img {
+      object-position: 50% 0%;
+      /* object-fit: contain; */
+   }
+   /* ====== END OF PRESIDENT SECTION ====== */
+
+
+   /* ====== CONTACT US SECTION ====== */
+   .contactUsSection {
+      width: 95%;
+      margin: 10rem auto 0;
+      padding: 7.5rem 0rem 9.5rem;
+      gap: 3rem;
+   }
+
+   .contactUsSection > h2 {
+      font-size: 7.5rem;
+      letter-spacing: 0.3rem;
+   }
+
+   .contactGrid {
+      width: 95%;
+      gap: 0;
+      /* background: red; */
+      padding: 0 0 2.5rem;
+   }
+
+   .contactGrid > div:first-child {
+      gap: 5.5rem;
+   }
+
+   .contactGrid > div:first-child > img {
+      width: 35rem;
+   }
+
+   .contactGrid > div:first-child > span {
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: 0.25rem;
+   }
+
+   .contactD {
+      font-size: 2.7rem;
+      gap: 1.5rem;
+   }
+
+   .hoursAvailable > h3 {
+      font-size: 4rem;
+      font-weight: 900;
+      letter-spacing: 0.25rem;
+   }
+
+   .hoursAvailable > ul {
+      gap: 0.7rem;
+   }
+
+   .hoursAvailable > ul > li {
+      font-size: 2.5rem;
+   }
+
+   form {
+      width: 100%;
+      gap: 3rem;
+      padding: 2.5rem 4rem 2rem 3.5rem;
+   }
+
+   form > h2 {
+      font-size: 5.5rem;
+      line-height: 5rem;
+   }
+
+   form > section {
+      gap: 2rem;
+   }
+
+   form > section > div {
+      gap: 0.5rem;
+   }
+
+   label {
+      font-size: 4rem;
+   }
+
+   input, textarea {
+      font-size: 3.6rem;
+      border: 0.45rem solid var(--2ndBlue);
+      background-color: white;
+      /* background-color: var(--4thBlue); */
+      padding: 0.6rem 2rem;
+      letter-spacing: 0.25rem;
+   }
+
+   input:focus, textarea:focus {
+      border: 0.45rem solid var(--1stRed);
+   }
+
+   textarea {
+      height: 20rem;
+   }
+
+   button {
+      font-size: 4.5rem;
+      font-weight: 900;
+      letter-spacing: 1rem;
+      padding: 0.5rem 3.5rem;
+      margin-top: 2rem;
+   }
+   /* ====== CONTACT US SECTION ====== */
+
+
+   /* ====== FOOTER SECTION ====== */
+   footer {
+      gap: 2rem;
+      padding: 8rem 0 4rem;
+   }
+
+   footer > span {
+      font-size: 3rem;
+      font-weight: 700;
+   }
+
+   footer > a {
+      font-size: 4rem;
+      letter-spacing: 0.2rem;
+   }
+
+   .hrdiv {
+      height: 0.7rem;
+      width: 40%;
+      border-radius: 1rem;
+   }
+
+   footer > div:last-child {
+      gap: 2rem;
+   }
+
+   footer > div:last-child span {
+      font-size: 3.5rem;
+      letter-spacing: 0.2rem;
+   }
+
+   footer > div:last-child img {
+      width: 20rem;
+   }
+}
