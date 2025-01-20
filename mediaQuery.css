@@ -1,4 +1,4 @@
-@media screen and (max-width: 375px) {
+
    /* === CARD SECTION === */
    .cardSection {
       grid-template-columns: 1fr;
@@ -262,4 +262,3 @@
    footer > div:last-child img {
       width: 20rem;
    }
-}
