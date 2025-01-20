@@ -54,13 +54,13 @@
    }
 
    .cardSection > div:first-child > ul > li > a {
-      font-size: 3.4rem;
+      font-size: 3.1rem;
       /* background-color: red; */
       padding: 0.7rem 2rem;
    }
 
    .cardSection > div:first-child > ul a::before {
-      font-size: 3rem;
+      font-size: 2rem;
    }
 
    .cardSection > div:first-child > ul > li {
