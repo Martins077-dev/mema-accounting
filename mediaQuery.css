@@ -1,26 +1,60 @@
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
+   header {
+      gap: 2.5rem;
+      padding: 3rem 0;
+   }
+
+   header h1 {
+      font-size: 5.5rem;
+      letter-spacing: 0.3rem;
+   }
+
+   header img {
+      width: 18rem;
+   }
+
+
+
+   /* ======  M A R Q U E E   S E C T I O N */
+   .marqueeSection {
+      margin-top: 5rem;
+   }
+
+   .marqueeDiv {
+      gap: 7rem;
+   }
+
+   .marqueeDiv > span {
+      font-size: 4rem;
+   }
+
    /* === CARD SECTION === */
    .cardSection {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1.55fr;
-      width: 95%;
-      padding: 2rem 4% 6rem;
+      margin: 7rem auto 0;
+      border-radius: 4rem;
+      width: 96%;
+      padding: 2rem 3% 12rem;
    }
 
    .cardSection > div:first-child > ul {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: auto auto;
       grid-template-rows: repeat(4, 1fr);
-      gap: 1rem 0;
+      gap: 3rem 0rem;
+      width: 99%;
+      justify-content: space-between;
    }
 
    .cardSection > div:first-child > h2 {
-      font-size: 7rem;
+      font-size: 8.5rem;
       padding: 1.5rem 0;
+      letter-spacing: 0.4rem;
    }
 
    .cardSection > div:first-child > ul > li > a {
-      font-size: 2.65rem;
+      font-size: 3.4rem;
       /* background-color: red; */
       padding: 0.7rem 2rem;
    }
@@ -30,14 +64,16 @@
    }
 
    .cardSection > div:first-child > ul > li {
-      border-radius: 2.5rem;
+      border-radius: 4rem;
    }
 
    .cardSection > div:nth-child(2) > div > div > span {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       padding: 0.7rem 1.5rem;
       letter-spacing: 0.2rem;
       border-radius: 1rem;
+      left: 3%;
+      bottom: 5%;
    }
 
    .cardSection > div:nth-child(2) {
@@ -48,29 +84,32 @@
 
    /* === ABOUT US SECTION === */
    .aboutUsSection {
-      width: 95%;
-      padding: 8rem 3% 9rem;
+      width: 96%;
+      padding: 8.5rem 3% 12rem;
+      border-radius: 4rem;
+      margin: 8rem auto 0;
    }
 
    .aboutUsSection > div > h2 {
-      font-size: 7rem;
-      margin: 0 auto 3.5rem;
+      font-size: 8.5rem;
+      letter-spacing: 0.4rem;
+      margin: 0 auto 4.5rem;
    }
 
    .aboutUsSection > div > div {
       padding: 4rem 4rem 4.5rem;
-      gap: 5rem;
+      gap: 7rem;
    }
 
    .aboutUsSection > div > div > p {
-      font-size: 3.5rem;
+      font-size: 4.7rem;
       letter-spacing: 0.15rem;
       text-align: justify;
       gap: 5rem;
    }
 
    .aboutUsSection > div > div > img {
-      width: 23rem;
+      width: 31rem;
    }
    /* === END OF ABOUT US SECTION === */
 
@@ -127,15 +166,16 @@
 
    /* ====== CONTACT US SECTION ====== */
    .contactUsSection {
-      width: 95%;
+      width: 96%;
       margin: 10rem auto 0;
-      padding: 7.5rem 0rem 9.5rem;
+      padding: 7.5rem 0rem 11rem;
+      border-radius: 4rem;
       gap: 3rem;
    }
 
    .contactUsSection > h2 {
-      font-size: 7.5rem;
-      letter-spacing: 0.3rem;
+      font-size: 8.5rem;
+      letter-spacing: 0.4rem;
    }
 
    .contactGrid {
@@ -160,7 +200,7 @@
    }
 
    .contactD {
-      font-size: 2.7rem;
+      font-size: 2.9rem;
       gap: 1.5rem;
    }
 
@@ -185,7 +225,7 @@
    }
 
    form > h2 {
-      font-size: 5.5rem;
+      font-size: 6.5rem;
       line-height: 5rem;
    }
 
@@ -198,11 +238,11 @@
    }
 
    label {
-      font-size: 4rem;
+      font-size: 4.5rem;
    }
 
    input, textarea {
-      font-size: 3.6rem;
+      font-size: 4rem;
       border: 0.45rem solid var(--2ndBlue);
       background-color: white;
       /* background-color: var(--4thBlue); */
@@ -261,5 +301,13 @@
 
    footer > div:last-child img {
       width: 20rem;
+   }
+
+   .backToTop {
+      font-size: 3.5rem;
+      letter-spacing: 0.3rem;
+      padding: 1rem 1.5rem;
+      bottom: 2rem;
+      right: 4%;
    }
 }
