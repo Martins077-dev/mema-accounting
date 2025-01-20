@@ -60,7 +60,7 @@
    }
 
    .cardSection > div:first-child > ul a::before {
-      font-size: 2rem;
+      font-size: 4rem;
    }
 
    .cardSection > div:first-child > ul > li {
