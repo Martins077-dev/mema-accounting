@@ -1,4 +1,4 @@
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 375px) {
    header {
       gap: 2.5rem;
       padding: 3rem 0;
@@ -11,6 +11,15 @@
 
    header img {
       width: 18rem;
+   }
+
+   /* navigation */
+   .desktopNav {
+      display: none;
+   }
+
+   .mobileNav {
+      display: flex;
    }
 
 
@@ -54,13 +63,13 @@
    }
 
    .cardSection > div:first-child > ul > li > a {
-      font-size: 3.1rem;
+      font-size: 3.4rem;
       /* background-color: red; */
       padding: 0.7rem 2rem;
    }
 
    .cardSection > div:first-child > ul a::before {
-      font-size: 4rem;
+      font-size: 3rem;
    }
 
    .cardSection > div:first-child > ul > li {
@@ -102,7 +111,7 @@
    }
 
    .aboutUsSection > div > div > p {
-      font-size: 4rem;
+      font-size: 4.7rem;
       letter-spacing: 0.15rem;
       text-align: justify;
       gap: 5rem;

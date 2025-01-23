@@ -60,7 +60,7 @@ header h1 {
 
 
 /*====== N A V I G A T I O N   B A R ======*/
-nav {
+.desktopNav {
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -72,14 +72,14 @@ nav {
    z-index: 3;
 }
 
-nav > ul {
+.desktopNav > ul {
    display: flex;
    align-items: center;
    list-style-type: none;
    gap: 2.8rem;
 }
 
-nav > ul > li > a {
+.desktopNav > ul > li > a {
    display: flex;
    text-decoration: none;
    letter-spacing: 0.1rem;
@@ -94,7 +94,7 @@ nav > ul > li > a {
    color: var(--5thBlue);
 } */
 
-nav > ul > li > a::before {
+.desktopNav > ul > li > a::before {
    content: '';
    position: absolute;
    border-radius: 0.3rem;
@@ -106,18 +106,18 @@ nav > ul > li > a::before {
    transition: all 0.5s;
 }
 
-nav > ul > li > a:hover::before {
+.desktopNav > ul > li > a:hover::before {
    right: 0;
    /* background-color: var(--5thBlue); */
 }
 
-nav > div {
+.desktopNav > div {
    display: flex;
    align-items: center;
    gap: 1.3rem;
 }
 
-nav > div > a {
+.desktopNav > div > a {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -132,9 +132,98 @@ nav > div > a {
    transition: all 0.4s;
 }
 
-nav > div > a:hover {
+.desktopNav > div > a:hover {
    color: var(--4thBlue);
    background-color: var(--1stBlue);
+}
+
+
+
+/* ====== M O B I L E   N A V ====== */
+.mobileNav {
+   display: none;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1.3rem 5%;
+   border-bottom: 0.2rem solid var(--1stBlue);
+   background-color: var(--4thBlue);
+   position: sticky;
+   top: 0;
+   z-index: 3;
+}
+
+.mobileNav > div:first-child {
+   position: relative;
+}
+
+.mobileNav > div:first-child > .menuBtn {
+   color: var(--1stBlue);
+   font-weight: 900;
+   font-size: 8.5rem;
+   line-height: 8rem;
+   display: flex;
+   background-color: var(--4thBlue);
+   border: none;
+}
+
+.mobileNav > div:nth-child(2) {
+   display: flex;
+   align-items: center;
+   gap: 5rem;
+}
+
+.mobileNav > div:nth-child(2) > a > .fa-brands {
+   font-size: 6rem;
+   line-height: 0;
+   display: flex;
+   color: var(--1stBlue);
+}
+
+.mobileNav > div:nth-child(2) > a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   line-height: 0;
+   /* background-color: red; */
+   aspect-ratio: 1 / 1;
+   padding: 2.5rem;
+   border-radius: 50%;
+   color: var(--1stBlue);
+   font-size: 2rem;
+   transition: all 0.4s;
+}
+
+.mobileNav > div:nth-child(2) > a:hover {
+   color: var(--4thBlue);
+   background-color: var(--1stBlue);
+}
+
+.mobileMenu {
+   position: absolute;
+   list-style-type: none;
+   display: none;
+   flex-direction: column;
+   gap: 2rem;
+   background-color: var(--2ndBlue);
+   width: 90rem;
+   top: 115%;
+   left: -90%;
+}
+
+.mobileMenu > li {
+   border-bottom: 0.4rem solid var(--4thBlue);
+}
+
+.mobileMenu a {
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   font-size: 5rem;
+   letter-spacing: 0.3rem;
+   font-weight: 800;
+   color: var(--4thBlue);
+   padding: 2rem 0rem 2rem 15rem;
 }
 /* ===========  E N D   O F   N A V I G A T I O N   B A R  =========== */
 
@@ -263,7 +352,7 @@ nav > div > a:hover {
    aspect-ratio: 1 / 1;
    font-family: 'Nunito';
    font-weight: 1000;
-   font-size: 2rem;
+   font-size: 1.5rem;
    /* line-height: 1.5rem; */
    color: var(--1stBlue);
    line-height: 0;
@@ -642,8 +731,6 @@ input:focus, textarea:focus {
 }
 
 textarea {
-   font-size: 1.5rem;
-   width: 100%;
    height: 15rem;
 }
 
@@ -727,11 +814,6 @@ footer > div:last-child span {
    font-size: 1.5rem;
    letter-spacing: 0.1rem;
    font-weight: 700;
-}
-
-footer hr {
-   width: 50%;
-   background: black;
 }
 
 .hrdiv {
