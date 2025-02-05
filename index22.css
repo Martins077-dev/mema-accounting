@@ -230,13 +230,17 @@ header h1 {
 
 /* ======  M A R Q U E E   S E C T I O N */
 .marqueeSection {
-   margin-top: 3rem;
+   margin-top: 8rem;
    overflow: hidden;
    user-select: none;
 }
 
 .marqueeSection > div {
    width: fit-content;
+}
+
+.servBr {
+   display: none;
 }
 
 .marqueeDiv {
@@ -293,9 +297,9 @@ header h1 {
 }
 
 .cardSection > div:first-child > h2 {
-   font-size: 3.5rem;
+   font-size: 4.5rem;
    /* line-height: 3.5rem; */
-   font-weight: 900;
+   font-weight: 1000;
    letter-spacing: 0.1rem;
    color: var(--1stBlue);
 }
@@ -472,8 +476,8 @@ header h1 {
    margin: 0 auto 1.5rem;
    width: fit-content;
    color: var(--1stBlue);
-   font-weight: 900;
-   font-size: 3.5rem;
+   font-weight: 1000;
+   font-size: 4.5rem;
    letter-spacing: 0.1rem;
    line-height: 4rem;
 }
@@ -523,7 +527,7 @@ header h1 {
 
 .presidentSection > h2 {
    color: var(--1stBlue);
-   font-size: 3.5rem;
+   font-size: 4rem;
    font-weight: 900;
    margin-bottom: 3rem;
    letter-spacing: 0.1rem;
@@ -597,7 +601,7 @@ header h1 {
    border-radius: 1.5rem;
    box-shadow: 0 0 1.5rem rgba(165,165,165,0.8), 0 0 4rem var(--4thBlue);
    width: 94%;
-   margin: 6rem auto 0;
+   margin: 7rem auto 0;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -607,7 +611,7 @@ header h1 {
 
 .contactUsSection > h2 {
    color: var(--1stBlue);
-   font-size: 3.5rem;
+   font-size: 4.5rem;
    font-weight: 900;
    letter-spacing: 0.1rem;
 }
