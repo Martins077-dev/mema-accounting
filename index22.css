@@ -37,9 +37,9 @@ header {
 
 header img {
    display: flex;
-   width: 10.3rem;
+   width: 7rem;
    padding: 0.2rem 0.4rem;
-   border-radius: 0.8rem;
+   border-radius: 50%;
    background-color: white;
 }
 
