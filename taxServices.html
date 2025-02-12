@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Property Management Bookkeeping</title>
+   <link rel="stylesheet" href="taxServices.css">
+   <link rel="stylesheet" href="mediaQuery.css">
+   <link rel="icon" type="image/x-icon" href="Images/MemaLogo/MemaLogo3.png">
+   <script type='module' src="index.js"></script>
+
+   <!-- font awesome cdn -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <!-- google fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+   <script>
+      const htmlTag = document.querySelector('html');
+      const viewportW = window.innerWidth/128;
+      
+      const viewW = viewportW + 'px';
+
+      htmlTag.style = `font-size: ${viewW}`;
+
+      console.log(viewW);
+
+      window.addEventListener('resize', () => {
+         const viewW2 = window.innerWidth/128;
+
+         const viewW2px = viewW2 + 'px';
+
+         htmlTag.style = `font-size: ${viewW2px}`;
+      });
+   </script>
+</head>
+<body>
+<header id="top">
+   <a href="#"><img src="Images/MemaLogo/MemaLogo3.png" alt="Mema Accounting Logo"></a>
+   <a href="#"><h1>Mema Accounting Solutions, LLC</h1></a>  
+</header>
+<nav class="desktopNav">
+   <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#AboutUs">ABOUT US</a></li>
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#contactUs">CONTACT US</a></li>
+   </ul>
+
+   <div>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+   </div>
+</nav>
+<nav class="mobileNav">
+   <div class="">
+      <button class="menuBtn">☰</button>
+
+      <ul class="mobileMenu">
+         <li><a href="#">Home</a></li>
+         <li><a href="#">About Us</a></li>
+         <li><a href="#">Services</a></li>
+         <li><a href="#">Contact Us</a></li>
+      </ul>
+   </div>
+
+   <div>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+   </div>
+</nav>
+
+
+<section class="taxSection">
+   <h2>Tax Services</h2>
+
+   <div class="BKgrid">
+      <div>
+         <p>Mema Accounting Solutions assists our clients with tax services by ensuring compliance with 
+         tax laws, maximizing deductions, and minimizing liabilities. We prepare and file tax returns 
+         accurately and on time, handling federal, state, and local tax requirements for individuals and 
+         businesses. <br><br> We analyze financial records to identify eligible deductions, credits, and exemptions, 
+         helping clients reduce their tax burden. MAS also provides strategic tax planning, offering 
+         guidance on estimated tax payments, business structure optimization, and potential tax-saving 
+         opportunities. <br><br> Additionally, we assist with tax audits by organizing documentation and 
+         communicating with tax authorities on behalf of our clients. By staying updated on changing tax 
+         laws, MAS helps our clients navigate complex regulations, avoid penalties, and achieve better 
+         financial outcomes.</p>
+      </div>
+
+      <div>
+         <img src="./Images/BOOKKEEPING/bookkeepingimg1.png" alt="">
+      </div>
+   </div>
+</section>
+
+
+<!------ FOOTER SECTION ------>
+<footer>
+   <span>Copyright © 2024 Mema Accounting Solutions, LLC - All Rights Reserved.</span>
+   <a href="policy.html">Our Privacy Policy</a>
+
+   <div class="hrdiv"></div>
+
+   <div>
+      <span>Managed by:</span>
+
+      <a href="#">
+         <img src="Images/turing logo22.jpg" alt="">
+      </a>
+   </div>
+</footer>
+</body>
+</html>

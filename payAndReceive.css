@@ -1,0 +1,340 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Nunito', Arial, Helvetica, sans-serif;
+}
+
+:root {
+   --1stBlue: #072b4e;
+   --2ndBlue: #2d5c88;
+   --3rdBlue: #a0bad5;
+   --4thBlue: #dfebf9;
+   --5thBlue: #046ef5;
+   --1stGray: #302926;
+   --2ndGray: #403c39;
+   --3rdGray: #615d5c;
+   --1stRed: #ef4237;
+}
+
+
+/* ===========  H E A D E R  =========== */
+header {
+   background-color: var(--1stBlue);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1.5rem;
+   padding: 1rem 0;
+}
+
+header img {
+   display: flex;
+   width: 7rem;
+   padding: 0.2rem 0.4rem;
+   border-radius: 50%;
+   background-color: white;
+}
+
+header a {
+   display: flex;
+   text-decoration: none;
+   color: white;
+}
+
+header h1 {
+   font-size: 2.9rem;
+   font-weight: 900;
+   letter-spacing: 0.1rem;
+   /* font-family: 'Cantarell', Arial, Helvetica, sans-serif; */
+} 
+/*====== E N D   O F   H E A D E R ======*/
+
+
+
+/*====== N A V I G A T I O N   B A R ======*/
+.desktopNav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1.3rem 5%;
+   border-bottom: 0.2rem solid var(--1stBlue);
+   background-color: var(--4thBlue);
+   position: sticky;
+   top: 0;
+   z-index: 3;
+}
+
+.desktopNav > ul {
+   display: flex;
+   align-items: center;
+   list-style-type: none;
+   gap: 2.8rem;
+}
+
+.desktopNav > ul > li > a {
+   display: flex;
+   text-decoration: none;
+   letter-spacing: 0.1rem;
+   color: var(--1stBlue);
+   font-weight: 900;
+   font-size: 1.5rem;
+   position: relative;
+   transition: all 0.5s;
+}
+
+/* nav > div:nth-child(2) > ul > li > a:hover {
+   color: var(--5thBlue);
+} */
+
+.desktopNav > ul > li > a::before {
+   content: '';
+   position: absolute;
+   border-radius: 0.3rem;
+   background-color: var(--1stBlue);
+   inset: 0;
+   top: 100%;
+   right: 100%;
+   bottom: -0.4rem;
+   transition: all 0.5s;
+}
+
+.desktopNav > ul > li > a:hover::before {
+   right: 0;
+   /* background-color: var(--5thBlue); */
+}
+
+.desktopNav > div {
+   display: flex;
+   align-items: center;
+   gap: 1.3rem;
+}
+
+.desktopNav > div > a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   line-height: 0;
+   /* background-color: red; */
+   aspect-ratio: 1 / 1;
+   width: 3.4rem;
+   border-radius: 50%;
+   color: var(--1stBlue);
+   font-size: 2rem;
+   transition: all 0.4s;
+}
+
+.desktopNav > div > a:hover {
+   color: var(--4thBlue);
+   background-color: var(--1stBlue);
+}
+
+
+
+/* ====== M O B I L E   N A V ====== */
+.mobileNav {
+   display: none;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1.3rem 5%;
+   border-bottom: 0.2rem solid var(--1stBlue);
+   background-color: var(--4thBlue);
+   position: sticky;
+   top: 0;
+   z-index: 3;
+}
+
+.mobileNav > div:first-child {
+   position: relative;
+}
+
+.mobileNav > div:first-child > .menuBtn {
+   color: var(--1stBlue);
+   font-weight: 900;
+   font-size: 8.5rem;
+   line-height: 8rem;
+   display: flex;
+   background-color: var(--4thBlue);
+   border: none;
+}
+
+.mobileNav > div:nth-child(2) {
+   display: flex;
+   align-items: center;
+   gap: 5rem;
+}
+
+.mobileNav > div:nth-child(2) > a > .fa-brands {
+   font-size: 6rem;
+   line-height: 0;
+   display: flex;
+   color: var(--1stBlue);
+}
+
+.mobileNav > div:nth-child(2) > a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-decoration: none;
+   line-height: 0;
+   /* background-color: red; */
+   aspect-ratio: 1 / 1;
+   padding: 2.5rem;
+   border-radius: 50%;
+   color: var(--1stBlue);
+   font-size: 2rem;
+   transition: all 0.4s;
+}
+
+.mobileNav > div:nth-child(2) > a:hover {
+   color: var(--4thBlue);
+   background-color: var(--1stBlue);
+}
+
+.mobileMenu {
+   position: absolute;
+   list-style-type: none;
+   display: none;
+   flex-direction: column;
+   gap: 2rem;
+   background-color: var(--2ndBlue);
+   width: 90rem;
+   top: 115%;
+   left: -90%;
+}
+
+.mobileMenu > li {
+   border-bottom: 0.4rem solid var(--4thBlue);
+}
+
+.mobileMenu a {
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   font-size: 5rem;
+   letter-spacing: 0.3rem;
+   font-weight: 800;
+   color: var(--4thBlue);
+   padding: 2rem 0rem 2rem 15rem;
+}
+/* ===========  E N D   O F   N A V I G A T I O N   B A R  =========== */
+
+
+.payAndRecSection {
+   margin: 7rem auto 0;
+   width: 93%;
+   display: flex;
+   flex-direction: column;
+   padding: 4.5rem 5.5rem 6rem;
+   align-items: center;
+   border-radius: 1.5rem;
+   box-shadow: 0 0 0.5rem var(--2ndGray);
+   gap: 3.5rem;
+   background-image: linear-gradient(rgb(255,255,255), rgb(255,255,255), rgba(255,255,255, 0.9)), url('./Images/BOOKKEEPING/bookkeepingimg2.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.payAndRecSection > h2 {
+   font-size: 4.5rem;
+   line-height: 4.5rem;
+   font-weight: 1000;
+   letter-spacing: 0.1rem;
+   color: var(--1stBlue);
+}
+
+.BKgrid {
+   display: grid;
+   grid-template-columns: 6fr 4.5fr;
+   gap: 4rem;
+}
+
+.BKgrid > div:nth-child(1) {
+   /* background-color: white;
+   padding: 1rem; */
+}
+
+.BKgrid > div:nth-child(1) > p {
+   font-size: 1.7rem;
+   font-weight: 700;
+   /* line-height: 2rem; */
+   color: var(--3rdGray);
+   letter-spacing: 0.07rem;
+   text-align: justify;
+}
+
+.BKgrid > div:nth-child(2) {
+   /* background-color: red; */
+   overflow: hidden;
+   padding: 1rem 0;
+}
+
+.BKgrid > div:nth-child(2) > img {
+   border-radius: 1rem;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   object-fit: cover;
+   object-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ======   F O O T E R   S E C T I O N   ====== */
+footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   background-color: var(--1stBlue);
+   color: var(--4thBlue);
+   font-size: 2rem;
+   padding: 3.5rem 0;
+   margin-top: 7.5rem;
+}
+
+footer > span {
+   font-size: 1.6rem;
+}
+
+footer > a {
+   text-decoration: none;
+   font-size: 1.7rem;
+   color: var(--4thBlue);
+   font-weight: 800;
+}
+
+footer > div:last-child {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+}
+
+footer > div:last-child span {
+   font-size: 1.5rem;
+   letter-spacing: 0.1rem;
+   font-weight: 700;
+}
+
+.hrdiv {
+   height: 0.2rem;
+   background-color: var(--4thBlue);
+   width: 20%;
+   margin: 2rem 0 1.5rem;
+}
+
+footer > div:last-child img {
+   width: 7rem;
+}
+/* ====== E N D   O F   F O O T E R   S E C T I O N   ====== */
