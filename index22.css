@@ -18,7 +18,7 @@
 }
 
 html {
-   scroll-padding-top: 65px;
+   scroll-padding-top: 6.5rem;
    scroll-behavior: smooth;
 }
 
@@ -496,6 +496,7 @@ header h1 {
    font-weight: 700;
    letter-spacing: 0.05rem;
    color: var(--2ndGray);
+   text-align: justify;
 }
 
 .aboutUsSection > div > div > img {
@@ -577,6 +578,7 @@ header h1 {
    font-weight: 600;
    font-size: 1.7rem;
    letter-spacing: 0.05rem;
+   text-align: justify;
 }
 
 .presidentGrid > div:nth-child(2) {
